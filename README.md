@@ -2,7 +2,7 @@
 
 ### Project Setup
 
-- Clone the repository :
+- Clone the repository : git@github.com:bishaljoshi/chat-system.git
 - Navigate to the project directory
 - Run `composer install` to install dependencies
 - Copy `.env.example` to `.env` and configure your environment variables
