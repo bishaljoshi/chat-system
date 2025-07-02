@@ -18,7 +18,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"content\": \"Test\",\n    \"customer_id\": 4\n}",
+							"raw": "{\n    \"content\": \"\",\n    \"customer_id\": 4\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -47,14 +47,7 @@
 					"name": "/conversations",
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{token}}",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "GET",
 						"header": [],
@@ -80,14 +73,7 @@
 					"name": "/conversations/:conversation_id/messages",
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{token}}",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "GET",
 						"header": [],
@@ -110,7 +96,7 @@
 							"variable": [
 								{
 									"key": "conversation_id",
-									"value": "2"
+									"value": "3"
 								}
 							]
 						}
