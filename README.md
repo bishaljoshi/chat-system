@@ -32,6 +32,9 @@ In the API (specifically Api/ConversationsController), we have hardcoded user au
 "Auth::loginUsingId(5)"
 This line simulates an authenticated user with ID 5 (assumed to be an Agent or Customer), allowing API routes to be tested without a frontend login.
 
+### Postman collection
+1. Import postman collection [./data/collection](data/Chat-System.postman_collection.json)
+
 ### Sample curl/Postman calls for each endpoint
 1. http://127.0.0.1:8000/api/conversations - GET
     curl --location 'http://127.0.0.1:8000/api/conversations' \

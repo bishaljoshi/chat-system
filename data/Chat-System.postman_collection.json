@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "7a6f5811-e849-4040-80f2-4b9522290e29",
+		"name": "Chat System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Conversation",
+			"item": [
+				{
+					"name": "/conversations",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\": \"Test\",\n    \"customer_id\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/conversations",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"conversations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/conversations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/conversations",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"conversations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/conversations/:conversation_id/messages",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/conversations/:conversation_id/messages",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"conversations",
+								":conversation_id",
+								"messages"
+							],
+							"variable": [
+								{
+									"key": "conversation_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/conversations/:conversation_id/messages",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\": \"test 2 updated\",\n    \"customer_id\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/conversations/:conversation_id/messages",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"conversations",
+								":conversation_id",
+								"messages"
+							],
+							"variable": [
+								{
+									"key": "conversation_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
